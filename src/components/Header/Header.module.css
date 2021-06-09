@@ -1,0 +1,12 @@
+.header{
+    height: 50px;
+    background-color: #3b3bd9;
+    display: flex;
+    align-items: center;
+
+}
+
+.header h2{
+    color: #f6f5f5;
+    margin-left: 10px;
+}
