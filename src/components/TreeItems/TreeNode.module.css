@@ -1,0 +1,20 @@
+.nodeBlock {
+    padding: 5px 15px;
+}
+
+.root {
+    display: flex;
+    align-items: center;
+}
+
+.root img {
+    width: 20px;
+    height: 20px;
+    margin-left: 3px;
+    margin-right: 3px;
+}
+
+.icon:hover {
+    opacity: 0.7;
+    cursor: pointer;
+}
