@@ -6,14 +6,14 @@
 
 Имеется исходный файл в формате json c описанием файловой структуры в виде линейного массива
 
-{ name: "root", ...},
-{ name: "folder 1", ... },
-{ name: "file 1 in folder 1", ... },
-{ name: "folder 2", ... },
-{ name: "folder 1 in folder 2", ... },
-{ name: "file 1 folder 1 in folder 2", ... },
-{ name: "file 2 folder 1 in folder 2", ... },
-...
+ { name: "root", ...},<br/>
+{ name: "folder 1", ... },<br/>
+{ name: "file 1 in folder 1", ... },<br/>
+{ name: "folder 2", ... },<br/>
+{ name: "folder 1 in folder 2", ... },<br/>
+{ name: "file 1 folder 1 in folder 2", ... },<br/>
+{ name: "file 2 folder 1 in folder 2", ... },<br/>
+...<br/>
 
 В результате в браузере должна отображаться файловая структура в виде дерева, как показано ниже:
 
