@@ -1,19 +1,8 @@
 .App{
-  margin: 0 auto;
-  width: 30%;
-  background-color: #faf4f4;
-  height: 100vh;
+  margin: 50px auto;
+  width: 500px;
+  background-color: #fcfafa;
+  height: 700px;
 }
 
-.d-tree-container {
-  list-style: none;
-  padding: 0;
-}
 
-.d-tree-node {
-  padding: 0.75rem 1.25rem;
-}
-
-.d-tree-toggler.active {
-  transform: rotate(45deg);
-}
