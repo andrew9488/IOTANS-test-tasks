@@ -7,7 +7,7 @@ type TreePropsType = {
     data: DataType
 }
 
-export const Tree: React.FC<TreePropsType> = ({data = []}) => {
+export const Tree: React.FC<TreePropsType> = ({data }) => {
     return (
         <ul className={style.treeContainer}>
             {data.map(tree => (

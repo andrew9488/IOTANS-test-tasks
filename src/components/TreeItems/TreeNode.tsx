@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React, {ReactNode, useState} from "react";
 import {Tree} from "./Tree";
 import style from "./TreeNode.module.css";
 import opFolder from "../../assets/folder-open-regular.svg";
@@ -8,8 +8,10 @@ import open from "../../assets/plus-square-regular.svg";
 import close from "../../assets/minus-square-regular.svg";
 
 type TreeNodePropsType = {
-    node: any
+    // @ts-ignore
+    node: IntrinsicAttributes & TreeNodePropsType & { children?: ReactNode }
 }
+
 export const TreeNode: React.FC<TreeNodePropsType> = ({node}) => {
 
     const [openFolder, setOpenFolder] = useState(false)
@@ -24,13 +26,13 @@ export const TreeNode: React.FC<TreeNodePropsType> = ({node}) => {
                 <>{hasFolder && !openFolder ?
                     <div className={style.root}>
                         <img src={open} className={style.icon} alt="+" onClick={() => setOpenFolder(!openFolder)}/>
-                        <img src={closeFolder}  alt="open"/>
+                        <img src={closeFolder} alt="open"/>
                         <span> {node.name} </span>
                     </div>
                     : <div className={style.root}>
                         <img src={close} className={style.icon} alt="-"
                              onClick={() => setOpenFolder(!openFolder)}/>
-                        <img src={opFolder}  alt="close"/>
+                        <img src={opFolder} alt="close"/>
                         <span> {node.name} </span>
                     </div>
                 }</>
