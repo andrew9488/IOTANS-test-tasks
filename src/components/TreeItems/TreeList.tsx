@@ -1,11 +1,11 @@
- import React from "react";
+import React from "react";
 import {Tree} from "./Tree";
-import {data} from "../../data/data";
+import {dataTree} from "../../data/data";
 
-export const TreeList: React.FC = ()=>{
+export const TreeList: React.FC = () => {
     return (
         <div>
-            <Tree data={data}/>
+            <Tree data={dataTree}/>
         </div>
     )
 }

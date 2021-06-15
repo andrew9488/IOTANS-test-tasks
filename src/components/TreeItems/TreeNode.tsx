@@ -1,5 +1,5 @@
 import React, {ReactNode, useState} from "react";
-import {Tree} from "./Tree";
+import {Tree, TreePropsType} from "./Tree";
 import style from "./TreeNode.module.css";
 import opFolder from "../../assets/folder-open-regular.svg";
 import closeFolder from "../../assets/folder-regular.svg";
@@ -8,8 +8,8 @@ import open from "../../assets/plus-square-regular.svg";
 import close from "../../assets/minus-square-regular.svg";
 
 type TreeNodePropsType = {
-    // @ts-ignore
-    node: IntrinsicAttributes & TreeNodePropsType & { children?: ReactNode }
+    //@ts-ignore
+    node: IntrinsicAttributes & TreePropsType & { children?: ReactNode; }
 }
 
 export const TreeNode: React.FC<TreeNodePropsType> = ({node}) => {
@@ -17,7 +17,7 @@ export const TreeNode: React.FC<TreeNodePropsType> = ({node}) => {
     const [openFolder, setOpenFolder] = useState(false)
     const [showContent, setShowContent] = useState(false)
 
-    const hasFolder = node.children
+    const hasFolder = node.data
     const hasContent = node.content
 
     return (
@@ -44,7 +44,7 @@ export const TreeNode: React.FC<TreeNodePropsType> = ({node}) => {
             }
             {hasFolder && openFolder && (
                 <ul>
-                    <Tree data={node.children}/>
+                    <Tree data={node.data}/>
                 </ul>
             )}
             {hasContent && showContent && (
